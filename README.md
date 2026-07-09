@@ -210,7 +210,7 @@ B.Tech CSE (AI & ML)
 
 📧 Email: *ranjanpriyanshu441@gmail.com*
 
-🔗 LinkedIn: [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/priyanshu-ranjan-74170a227/)
+🔗 LinkedIn: [https://linkedin.com/in/priyanshu-ranjan-74170a227/](https://www.linkedin.com/in/priyanshu-ranjan-74170a227/)
 
 💻 GitHub: https://github.com/priyanshuranjan02
 
