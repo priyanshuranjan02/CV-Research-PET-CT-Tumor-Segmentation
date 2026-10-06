@@ -1,0 +1,11 @@
+parameter,value
+method,Dev39
+candidate_strategy,PET-only
+pet_threshold,2.25
+hot_threshold,3.0
+three_d_min_voxels,75
+three_d_min_slices,2
+ranking_method,PET-quality
+hot_fraction_gate,0.4
+top_k,4
+core_policy,P70

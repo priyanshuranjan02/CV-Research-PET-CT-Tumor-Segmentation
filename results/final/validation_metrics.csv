@@ -1,0 +1,2 @@
+case,pet_threshold,hot_threshold,hot_fraction_gate,top_k,core_policy,candidate_voxels,components,eligible_components,selected_labels,prediction_voxels,gt_voxels,gt_overlap,dice,iou,slice_recall,fpr,predicted_slices,gt_positive_slices,detected_gt_slices
+PETCT_0011f3deaf,2.25,3.0,0.4,4,P70,230550,36,12,"[84, 310, 32, 302]",52000,9206,1651,0.3041355807313254,0.179339561155768,0.5217391304347826,0.8454201998152968,37,23,12

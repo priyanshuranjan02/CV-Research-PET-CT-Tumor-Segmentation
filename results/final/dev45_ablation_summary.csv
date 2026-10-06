@@ -1,0 +1,3 @@
+cohort,n_cases,mean_dice_delta,mean_iou_delta,mean_slice_recall_delta,mean_fpr_delta,mean_prediction_voxel_delta,dice_improved_cases,dice_equal_cases,dice_worse_cases,fpr_lower_cases,fpr_equal_cases,fpr_higher_cases
+development,6,0.013444947714668467,0.008459165024869765,0.0062865497076023584,0.0036006808077590977,24605.0,3,3,0,1,0,5
+validation,1,0.001571907849521298,0.0008292756058761001,0.038461538461538436,0.005479452054794609,17398.0,1,0,0,0,0,1

@@ -1,23 +1,56 @@
+# =========================
 # Python
+# =========================
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 
-# Virtual Environment
+# =========================
+# Virtual environments
+# =========================
 .venv/
+.venv_seg/
 venv/
 env/
 
-# Jupyter
+# =========================
+# Jupyter / IDE
+# =========================
 .ipynb_checkpoints/
-
-# VS Code
 .vscode/
 
-# Results (optional)
-results/*.csv
-
-# OS
+# =========================
+# macOS
+# =========================
 .DS_Store
-Thumbs.db
+._*
+
+# =========================
+# Local datasets
+# =========================
+data/
+development_cases/
+verified_case/
+
+# =========================
+# Large local archives
+# =========================
+*.zip
+
+# =========================
+# Generated / experimental results
+# =========================
+results/development_cases/
+results/inference/
+results/validation/
+
+# Keep the final research package
+!results/final/
+!results/final/**
+
+# =========================
+# Temporary / backup files
+# =========================
+*.bak
+*.tmp*.save

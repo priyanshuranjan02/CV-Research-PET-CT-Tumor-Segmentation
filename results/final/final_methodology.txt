@@ -1,0 +1,52 @@
+FINAL METHODOLOGY DESCRIPTION
+==============================
+
+Candidate Generation
+---------------------
+The method operates on CT-aligned PET SUV volumes. Voxels with
+SUV >= 2.25 are initially considered PET candidate voxels.
+
+3D Component Formation
+----------------------
+Candidate voxels are grouped into connected 3D components.
+Components smaller than 75 voxels or spanning fewer than two
+slices are discarded.
+
+PET Component Characterization
+------------------------------
+Each eligible component is characterized using PET-derived
+features including mean SUV, maximum SUV, fraction of voxels
+above the hot threshold, spatial persistence, longitudinal
+extent and compactness.
+
+PET Quality Ranking
+-------------------
+The Dev39 PET quality score combines normalized component
+intensity and structural PET characteristics. Components are
+ranked using this score with mean SUV as the secondary ranking
+criterion.
+
+False-Positive Control
+----------------------
+A hot-fraction threshold of 0.40 is applied before ranking.
+This removes components with insufficiently concentrated hot
+PET uptake.
+
+Top-K Selection
+---------------
+The four highest-ranked eligible components are retained.
+
+Hot-Core Extraction
+-------------------
+For each selected component, a P70 core is extracted using the
+PET intensity distribution. The resulting cores are combined to
+form the final predicted tumor mask.
+
+Evaluation
+----------
+Performance is evaluated using Dice coefficient, intersection
+over union, slice-level recall and false-positive rate.
+
+Development and validation are kept separate. Ground-truth
+annotations are used for evaluation only and are not required
+for the final component-selection procedure.

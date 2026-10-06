@@ -1,0 +1,4 @@
+Method,Dice,IoU,Slice Recall,FPR,Status,Dice Improvement vs Baseline
+Dev10 baseline,0.100912,0.059005,0.332675,0.081641,Baseline,0.0
+Dev39 proposed,0.120468,0.070577,0.376596,0.085242,Final proposed method,0.019556000000000004
+Dev52 PET + CT structural,0.119794,0.070125,0.362854,0.077767,Rejected; lower Dice/recall,0.018881999999999996

@@ -1,0 +1,57 @@
+FINAL LIMITATIONS
+=================
+
+1. Small development cohort
+---------------------------
+The development analysis uses six cases. Therefore, feature
+selection and ranking behavior may not generalize to a larger
+population.
+
+2. Limited validation
+---------------------
+The final validation analysis uses one validation case. Its
+performance should therefore be interpreted as a case-level
+external check rather than a population-level performance
+estimate.
+
+3. False positives
+------------------
+The principal limitation is physiological/background FDG uptake.
+High SUV and high PET-quality scores can occur in components that
+do not correspond to the tumor annotation.
+
+4. High validation FPR
+----------------------
+The validation case produced a high false-positive rate despite
+a Dice score of 0.304136. This indicates that the predicted
+segmentation contains substantial non-tumor regions.
+
+5. PET-only final ranking
+-------------------------
+The final Dev39 ranking intentionally uses PET-derived component
+features. CT and anatomical information were investigated
+diagnostically but were not added to the final ranking because
+the available cohort was insufficient to justify another tuned
+model.
+
+6. Classical segmentation approach
+-----------------------------------
+The method is based on thresholding, connected components,
+hand-crafted features and percentile-based core extraction.
+It does not learn representations from data.
+
+7. Dataset limitations
+----------------------
+The conclusions should not be generalized to all PET-CT
+acquisition protocols, scanners, reconstruction settings or
+cancer types.
+
+8. Future work
+--------------
+A larger annotated cohort could support:
+- PET-CT multimodal learning
+- anatomical priors
+- learned false-positive suppression
+- 3D CNN/Transformer segmentation
+- cross-validation
+- patient-level statistical evaluation

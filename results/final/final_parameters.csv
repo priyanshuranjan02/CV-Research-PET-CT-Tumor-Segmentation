@@ -1,0 +1,11 @@
+Parameter,Value,Unit / Description
+PET candidate threshold,2.25,SUV
+Hot feature threshold,3.0,SUV
+3D minimum component size,75,voxels
+3D minimum slice span,2,slices
+PET quality ranking,Dev39 PET quality score,ranking
+Hot fraction gate,0.40,fraction
+Top-K,4,components
+Core extraction,P70,percentile
+Candidate strategy,PET-only,candidate generation
+Proposed version,Dev39,frozen

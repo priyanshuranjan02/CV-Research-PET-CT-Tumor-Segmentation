@@ -1,0 +1,33 @@
+DEV53 — FINAL INDEPENDENT VALIDATION
+================================================================================
+
+Case: PETCT_0011f3deaf
+
+Frozen Dev39 configuration:
+PET threshold: 2.25
+Hot threshold: 3.0
+3D minimum voxels: 75
+3D minimum slices: 2
+Hot fraction gate: 0.4
+Top-K: 4
+Core policy: P70
+
+Inference is GT-free.
+GT is used only for post-hoc evaluation.
+
+RESULTS
+--------------------------------------------------------------------------------
+Dice: 0.304136
+IoU: 0.179340
+Slice recall: 0.521739
+FPR: 0.845420
+Prediction voxels: 52000
+GT voxels: 9206
+GT overlap: 1651
+Candidate voxels: 230550
+3D components: 36
+Eligible components: 12
+Selected labels: [84, 310, 32, 302]
+Predicted slices: 37
+GT-positive slices: 23
+Detected GT slices: 12

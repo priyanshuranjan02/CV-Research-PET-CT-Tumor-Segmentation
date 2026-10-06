@@ -1,0 +1,109 @@
+PET-CT TUMOR SEGMENTATION — FINAL RESEARCH SUMMARY
+==================================================
+
+Project:
+Automatic Tumor Segmentation in PET-CT Images Using
+Hybrid Intensity and Texture-Based Techniques
+
+FINAL PROPOSED METHOD
+---------------------
+The final proposed method is Dev39.
+
+Pipeline:
+1. Load CT-aligned SUV PET volume.
+2. Generate PET candidate voxels using SUV >= 2.25.
+3. Extract connected 3D components.
+4. Retain components with >=75 voxels and >=2 slices.
+5. Compute PET component quality features.
+6. Apply hot-fraction gate >=0.40.
+7. Rank eligible components using the Dev39 PET quality score.
+8. Select Top-K = 4 components.
+9. Extract P70 PET hot core.
+10. Produce the final 3D segmentation.
+
+FROZEN PARAMETERS
+-----------------
+PET threshold:       2.25 SUV
+Hot threshold:       3.0 SUV
+3D minimum voxels:   75
+3D minimum slices:   2
+Hot fraction gate:   0.40
+Top-K:               4
+Core policy:         P70
+Ranking:             Dev39 PET quality score
+
+DEVELOPMENT RESULTS
+-------------------
+Cases:               6
+Dice:                0.120468
+IoU:                 0.070577
+Slice recall:        0.376596
+FPR:                 0.085242
+Prediction voxels:   376252
+
+BASELINE COMPARISON
+-------------------
+Dev10 Dice:          0.100912
+Dev39 Dice:          0.120468
+
+Absolute Dice improvement:
++0.019556
+
+Relative Dice improvement:
+approximately +19.38 percent
+
+VALIDATION RESULT
+-----------------
+Validation case:
+PETCT_0011f3deaf
+
+Dice:                0.304136
+IoU:                 0.179340
+Slice recall:        0.521739
+FPR:                 0.845420
+Prediction voxels:   52000
+GT overlap voxels:   1651
+
+IMPORTANT INTERPRETATION
+------------------------
+The validation Dice is higher than the development-cohort mean,
+but the validation false-positive rate is substantially higher.
+
+Therefore the validation result must not be presented as evidence
+of uniformly strong segmentation performance.
+
+The main observed limitation is false-positive PET uptake.
+The component audit demonstrated that high PET intensity,
+persistence and PET quality do not always distinguish tumor
+uptake from physiologic/background uptake.
+
+DEV58 COHORT DIAGNOSTIC FINDING
+-------------------------------
+The cohort diagnostic analysis found stronger spatial separation
+than pure PET intensity for some successful components.
+
+However, the distributions still overlap substantially and the
+development cohort is small. Therefore an additional spatial
+ranking model was NOT introduced into the final method.
+
+This avoids overfitting the final method to the available
+development cases.
+
+FINAL RESEARCH CONCLUSION
+-------------------------
+The study demonstrates a reproducible PET-based candidate
+generation, 3D component ranking and hot-core extraction
+pipeline.
+
+The proposed method improves the development Dice over the
+Dev10 baseline, while remaining sensitive to physiological and
+background FDG uptake.
+
+The work therefore demonstrates a useful classical computer
+vision baseline and identifies candidate localization and
+false-positive discrimination as the principal remaining
+challenges.
+
+Future work should investigate larger multi-patient datasets,
+anatomically informed PET-CT fusion, learned segmentation
+models and stronger false-positive suppression.

@@ -1,0 +1,39 @@
+DEV45 — FINAL REPRODUCIBILITY REPORT
+================================================================================
+Generated: 2026-10-05T19:07:24
+
+FINAL METHOD: Dev39
+Dev39 was frozen before validation.
+
+PIPELINE
+PET-only SUV threshold >= 2.25
+-> exact Dev10 3D connected-component filtering
+-> PET-quality component ranking
+-> hot_fraction >= 0.40
+-> Top-K = 4
+-> P70 core
+
+DEVELOPMENT COHORT
+6 development cases
+Dev10 mean Dice = 0.100912
+Dev39 mean Dice = 0.114357
+Dev39 improvement = +0.013445
+
+VALIDATION COHORT
+1 independent Case-7 validation case
+Dev10 Dice = 0.052155
+Dev39 Dice = 0.053727
+Dev39 improvement = +0.001572
+
+COMBINED COHORT
+7 total evaluated cases
+Dev10 mean Dice = 0.093947
+Dev39 mean Dice = 0.105695
+Dev39 improvement = +0.011749
+
+IMPORTANT LIMITATION
+The validation cohort currently contains only one independent case.
+Therefore, the validation result provides preliminary evidence of generalization but is not sufficient for statistical generalization claims.
+
+DEV10 SOURCE FILE WAS NOT MODIFIED.
+Dev39 parameters were not changed during validation.
